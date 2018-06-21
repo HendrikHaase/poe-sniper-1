@@ -90,7 +90,7 @@ module Poe
             end
           elsif provider.eql?("ggg")
             input.each do |search_url, name|
-              @sockets << Ggg::Socket.new(Ggg::UriHelper.live_ws_uri(search_url), name, @alerts, @config['ggg_session_id'], @config['ggg_headers'])
+              @sockets << Ggg::Socket.new(Ggg::UriHelper.live_ws_uri(search_url), name, @alerts, @config['ggg_session_id'])
             end
           else
             raise "Provider unknown: #{provider}"
