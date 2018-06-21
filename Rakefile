@@ -24,7 +24,7 @@ end
 task :start do
   puts "When started via rake task the 'user interaction before exit' functionality is broken upon interrupt because it also interrupts the rake task."
   require_relative 'lib/poe/sniper'
-  Poe::Sniper.run('input/config.ini')
+  Poe::Sniper.run('spec/resources/local_test_config/config.ini')
 end
 
 task :start_offline_debug do

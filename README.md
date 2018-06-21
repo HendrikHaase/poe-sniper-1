@@ -69,7 +69,7 @@ Written in Ruby, packaged as standalone Windows executable with [OCRA](https://g
 
 ### Usage from source
 
-Create `.env` file as described in the [analytics chapter](#analytics). See default tasks in [`Rakefile`](Rakefile) for running tests and building the executable.
+Create `.env` file as described in the [analytics chapter](#analytics) (you probably need to add something like `ANALYTICS_KEY "YQ=="`). See default tasks in [`Rakefile`](Rakefile) for running tests and building the executable.
 
 #### Start in normal mode
 
