@@ -2,7 +2,6 @@ require 'yaml'
 require 'parseconfig'
 require 'eventmachine'
 
-require_relative 'whisper'
 require_relative 'alert'
 require_relative 'alerts'
 require_relative 'json_helper'
