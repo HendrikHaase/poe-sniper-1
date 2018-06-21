@@ -9,7 +9,6 @@ module Poe
       class HttpResponseParser
         def self.new_id(response)
           JsonHelper.parse(response.body)['newid']
-          response_data['newid']
         end
 
         def initialize(socket_response_body_json)
