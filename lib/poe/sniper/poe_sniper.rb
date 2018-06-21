@@ -1,6 +1,6 @@
 require 'yaml'
 require 'parseconfig'
-require 'em/pure_ruby' # Because of issues with native extensions on Windows (on dev env)
+require 'eventmachine'
 
 require_relative 'whisper'
 require_relative 'alert'
