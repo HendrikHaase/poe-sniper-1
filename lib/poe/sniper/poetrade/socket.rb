@@ -1,7 +1,7 @@
 require 'faye/websocket'
 require 'net/http'
 
-require_relative '../whisper'
+require_relative 'whisper'
 require_relative '../alert'
 require_relative '../analytics'
 require_relative '../analytics_data'

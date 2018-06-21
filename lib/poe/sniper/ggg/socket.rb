@@ -3,7 +3,7 @@ require 'net/http'
 require 'permessage_deflate'
 
 require_relative "uri_helper"
-require_relative '../whisper'
+require_relative 'whisper'
 require_relative '../alert'
 require_relative '../analytics'
 require_relative '../analytics_data'
@@ -43,7 +43,7 @@ module Poe
                 Logger.instance.debug("New ID received: #{id}")
 
                 response = Net::HTTP.get(UriHelper.details_uri(live_ws_uri, id))
-                whisper = JsonHelper.parse(response.body)["result"].first["listing"]["whisper"]
+                whisper = Whisper.new(JsonHelper.parse(response)["result"].first["listing"]["whisper"])
                 @alerts.push(Alert.new(whisper, @search_name))
               end
             end

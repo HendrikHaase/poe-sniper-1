@@ -1,5 +1,6 @@
 require 'nokogiri'
 
+require_relative 'whisper'
 require_relative '../json_helper'
 require_relative '../logger'
 
