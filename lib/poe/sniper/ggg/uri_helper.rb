@@ -11,8 +11,8 @@ module Poe
           URI.parse("#{WS_URI}/#{league(search_url)}/#{search_id(search_url)}")
         end
 
-        def self.details_uri(search_url, id)
-          URI.parse("#{DETAILS_URI}/#{id}?query=#{search_id(search_url)}")
+        def self.details_uri(live_ws, id)
+          URI.parse("#{DETAILS_URI}/#{id}?query=#{live_ws.to_s.split("/").last}")
         end
   
       private
