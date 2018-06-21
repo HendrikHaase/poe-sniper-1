@@ -52,7 +52,7 @@ module Poe
       def self.ensure_config_file!(config_path)
         unless File.file?(config_path)
           Encapsulators.user_interaction_before('exit') do
-            Logger.insatnce.error("Config file (#{config_path}) not found.")
+            Logger.instance.error("Config file (#{config_path}) not found.")
           end
           exit
         end
