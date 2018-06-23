@@ -26,7 +26,7 @@ module Poe
 
         def setup(keepalive_timeframe_seconds, retry_timeframe_seconds, reconnecting = false)
           ws = Faye::WebSocket::Client.new(@live_ws_uri.to_s, nil, headers: @headers, extensions: [PermessageDeflate])
-          Logger.instance.info("Opening connection to #{get_log_url_signature}")
+          Logger.instance.info("Connecting to #{get_log_url_signature}")
 
           ws.on :open do |event|
             log_connection_open(@live_ws_uri)
@@ -66,11 +66,11 @@ module Poe
         private
 
         def get_log_url_signature
-          "#{@live_ws_uri} (#{@search_name})"
+          "#{@live_ws_uri.host.gsub("www.", "")}#{@live_ws_uri.path} (#{@search_name})"
         end
 
-        def log_connection_open(url)
-          Logger.instance.info("Connected to #{url} (#{@search_name})")
+        def log_connection_open(uri)
+          Logger.instance.info("Connected to #{get_log_url_signature}")
         end
 
         def log_connection_close(event)
