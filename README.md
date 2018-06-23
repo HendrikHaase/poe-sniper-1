@@ -55,7 +55,7 @@ Certain versions of Windows might warn against running unverified apps. If promp
 
 You're all set. Enjoy your interrupt free PoE.
 
-Additionally [here's a modified version of the Lutbot AutoHotkey Macro](https://github.com/thisismydesign/poe-lutbot-ahk) where the 'Paste' option is added allowing you to hotkey sending messages from the clipboard. That's right. One click to set up a trade. It's awesome, I know!
+Additionally you can automate pasting the message via [PoE TradeMacro](https://github.com/PoE-TradeMacro/POE-TradeMacro). Add the following as a custom macro: `F2::SendInput {Enter}^v{Enter}` as described [here](https://github.com/PoE-TradeMacro/POE-TradeMacro/wiki/Custom-Macros). This maps message sending to F2. That's right. One click to set up a trade. It's awesome, I know!
 
 ## Disclaimer
 
